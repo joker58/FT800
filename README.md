@@ -1,6 +1,6 @@
 # FT800 Calibrate with Arduino FTImpl
 
-<code>
+``` 
 if((EEPROM.read(0) != 0x7C)){
         FTImpl.DLStart();
         FTImpl.Cmd_Calibrate(0);
@@ -14,4 +14,5 @@ if((EEPROM.read(0) != 0x7C)){
       FTImpl.Write32(REG_TOUCH_TRANSFORM_A + i, EEPROM.read(1 + i));
       
  }
- </code>
+```
+По умолчанию там уже может быть записаны результаты неверной калибровки. Тогда надо собрать проект с обратным условием.
